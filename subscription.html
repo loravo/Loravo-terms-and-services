@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Loravo Subscription</title>
+
+<style>
+:root {
+  --bg: #0b0b0c;
+  --card: #121214;
+  --border: #1f1f23;
+  --text: #e8e6e3;
+  --muted: #a1a1aa;
+  --gold: #d4af37;
+  --silver: #c9ccd1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Georgia", serif;
+}
+
+/* NAV */
+nav {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin-left: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #a855f7;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.nav-links a.active {
+  background: #2a1f0f;
+  color: white;
+}
+
+/* MAIN */
+.container {
+  max-width: 700px;
+  margin-left: 120px;
+  padding: 50px 0;
+}
+
+/* HEADER */
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 10px 0 20px;
+}
+
+.subtext {
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* PLAN CARD */
+.plan {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-title {
+  font-size: 28px;
+}
+
+.price {
+  font-size: 22px;
+}
+
+ul {
+  margin: 20px 0;
+  list-style: none;
+}
+
+ul li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: var(--silver);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* TERMS */
+.terms {
+  margin-top: 60px;
+}
+
+.terms h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.terms p {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .container, .nav-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">Loravo</div>
+    <div class="nav-links">
+      <a href="#" onclick="showTerms()">Terms</a>
+      <a href="#" class="active" onclick="showPlans()">Subscription</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" id="plans">
+
+  <div class="eyebrow">PLANS</div>
+  <h1>Subscription</h1>
+  <p class="subtext">Review plan options and subscription conditions for Loravo.</p>
+
+  <!-- CORE -->
+  <div class="plan">
+    <div class="plan-header">
+      <div class="plan-title">Core</div>
+      <div class="price">$0/month</div>
+    </div>
+    <ul>
+      <li>Basic access</li>
+      <li>Core features</li>
+      <li>Email support</li>
+    </ul>
+    <button>Get Started</button>
+  </div>
+
+  <!-- PLUS -->
+  <div class="plan">
+    <div class="plan-header">
+      <div class="plan-title">Plus</div>
+      <div class="price">$16.99/month</div>
+    </div>
+    <ul>
+      <li>Improved LXT models</li>
+      <li>Methodical planning</li>
+      <li>Email AI concierge messaging</li>
+      <li>Email, news, and weather tracking and automation</li>
+      <li>Custom AI personality</li>
+      <li>Priority speeding</li>
+    </ul>
+    <button>Buy Plus</button>
+  </div>
+
+  <!-- PRO -->
+  <div class="plan">
+    <div class="plan-header">
+      <div class="plan-title">Pro</div>
+      <div class="price">$34.99/month</div>
+    </div>
+    <ul>
+      <li>Everything in platinum</li>
+      <li>Advanced AI tools</li>
+      <li>Unlimited email accounts</li>
+      <li>Early access features</li>
+      <li>Strategic mode</li>
+    </ul>
+    <button>Buy Pro</button>
+  </div>
+
+</div>
+
+<!-- TERMS -->
+<div class="container terms" id="terms" style="display:none;">
+  <h2>Subscription Terms</h2>
+  <p>All subscriptions are billed monthly and renew automatically unless canceled.</p>
+  <p>All payments are final and non-refundable.</p>
+  <p>You may cancel anytime. Access continues until the billing period ends.</p>
+  <p>We may update pricing or features at any time.</p>
+</div>
+
+<script>
+function showTerms() {
+  document.getElementById("plans").style.display = "none";
+  document.getElementById("terms").style.display = "block";
+}
+
+function showPlans() {
+  document.getElementById("plans").style.display = "block";
+  document.getElementById("terms").style.display = "none";
+}
+</script>
+
+</body>
+</html>
