@@ -10,7 +10,7 @@
   --silver: #c7cbd1;
   --silver-hover: #d9dde2;
   --silver-text: #111111;
-  --page-width: 760px;
+  --page-width: 900px;
   --nav-width: 1100px;
   --radius-lg: 20px;
 }
@@ -28,7 +28,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 a {
@@ -129,155 +129,51 @@ a {
 }
 
 .intro {
-  max-width: 520px;
+  max-width: 700px;
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 1rem;
 }
 
-.plans-section {
-  margin-bottom: 32px;
-}
-
-.section-head {
-  margin-bottom: 16px;
-}
-
-.section-label {
-  margin: 0 0 8px;
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.section-head h2 {
-  margin: 0;
-  font-size: 1.65rem;
-  letter-spacing: -0.03em;
-}
-
-.plan-list {
-  display: grid;
-  gap: 16px;
-}
-
-.plan-card {
-  width: 100%;
-  background: linear-gradient(180deg, var(--panel), var(--panel-2));
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 22px;
-}
-
-.pro-highlight {
-  border-color: #3a3020;
-  box-shadow: 0 0 30px rgba(210, 176, 116, 0.08);
-}
-
-.plan-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 18px;
-  margin-bottom: 18px;
-}
-
-.plan-tier {
-  margin: 0 0 8px;
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.plan-card h3 {
-  margin: 0;
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-
-.plan-price {
-  margin: 0;
-  white-space: nowrap;
-  font-family: Arial, sans-serif;
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.plan-price span {
-  font-size: 0.95rem;
-  color: var(--muted-2);
-  font-weight: 500;
-  margin-left: 2px;
-}
-
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px;
-}
-
-.feature-list li {
-  position: relative;
-  padding-left: 28px;
-  margin-bottom: 11px;
-  color: #ece8e1;
-  font-family: Arial, sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.45;
-}
-
-.feature-list li:last-child {
-  margin-bottom: 0;
-}
-
-.feature-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.plan-button {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  padding: 15px 18px;
-  border-radius: 999px;
-  background: var(--silver);
-  color: var(--silver-text);
-  border: 1px solid var(--silver);
-  font-family: Arial, sans-serif;
-  font-size: 0.98rem;
-  font-weight: 700;
-  transition: 0.15s ease;
-}
-
-.plan-button:hover {
-  background: var(--silver-hover);
-  border-color: var(--silver-hover);
-  color: var(--silver-text);
+.doc-section-title {
+  margin: 48px 0 10px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 
 .legal-text {
-  max-width: 660px;
+  max-width: 860px;
 }
 
 .legal-text h2 {
-  margin: 0 0 14px;
-  font-size: 1.6rem;
+  margin: 30px 0 12px;
+  font-size: 1.55rem;
   letter-spacing: -0.03em;
+}
+
+.legal-text h3 {
+  margin: 18px 0 10px;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
 }
 
 .legal-text p {
   margin: 0 0 14px;
   color: var(--muted);
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.75;
+}
+
+.legal-text ul {
+  margin: 0 0 18px 22px;
+  padding: 0;
+  color: var(--muted);
+}
+
+.legal-text li {
+  margin-bottom: 10px;
+  line-height: 1.7;
 }
 
 .footer {
@@ -311,24 +207,16 @@ a {
     padding-top: 24px;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .plan-top {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .plan-price {
-    white-space: normal;
-  }
-
-  .plan-card {
-    padding: 20px;
+  .hero h1,
+  .doc-section-title {
+    font-size: 2.4rem;
   }
 
   .logo {
     font-size: 1.9rem;
+  }
+
+  .legal-text h2 {
+    font-size: 1.3rem;
   }
 }
