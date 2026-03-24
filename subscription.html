@@ -1,257 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Loravo Subscription</title>
-
-<style>
-:root {
-  --bg: #0b0b0c;
-  --card: #121214;
-  --border: #1f1f23;
-  --text: #e8e6e3;
-  --muted: #a1a1aa;
-  --gold: #d4af37;
-  --silver: #c9ccd1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Georgia", serif;
-}
-
-/* NAV */
-nav {
-  border-bottom: 1px solid var(--border);
-  padding: 20px 0;
-}
-
-.nav-container {
-  max-width: 900px;
-  margin-left: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: #a855f7;
-}
-
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  margin-left: 20px;
-  padding: 8px 14px;
-  border-radius: 20px;
-}
-
-.nav-links a.active {
-  background: #2a1f0f;
-  color: white;
-}
-
-/* MAIN */
-.container {
-  max-width: 700px;
-  margin-left: 120px;
-  padding: 50px 0;
-}
-
-/* HEADER */
-.eyebrow {
-  color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-h1 {
-  font-size: 64px;
-  margin: 10px 0 20px;
-}
-
-.subtext {
-  color: var(--muted);
-  margin-bottom: 40px;
-}
-
-/* PLAN CARD */
-.plan {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 30px;
-}
-
-.plan-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.plan-title {
-  font-size: 28px;
-}
-
-.price {
-  font-size: 22px;
-}
-
-ul {
-  margin: 20px 0;
-  list-style: none;
-}
-
-ul li {
-  margin: 10px 0;
-  position: relative;
-  padding-left: 20px;
-}
-
-ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-}
-
-/* BUTTON */
-button {
-  width: 100%;
-  padding: 14px;
-  border-radius: 30px;
-  border: none;
-  background: var(--silver);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* TERMS */
-.terms {
-  margin-top: 60px;
-}
-
-.terms h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.terms p {
-  margin-bottom: 12px;
-  color: var(--muted);
-}
-
-/* RESPONSIVE */
-@media(max-width: 900px) {
-  .container, .nav-container {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscription Terms | Loravo Legal</title>
+  <meta
+    name="description"
+    content="Loravo subscription terms covering billing, renewals, cancellations, refunds, taxes, and charge disputes."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
+<body data-page="Subscription Terms">
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="header-left">
+        <a href="index.html" class="site-logo" aria-label="Loravo home">
+          <img src="logo.png" alt="Loravo logo" class="site-logo-mark" />
+        </a>
 
-<body>
+        <nav class="site-nav" id="site-nav" aria-label="Legal">
+          <a href="index.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="subscription.html" class="active" aria-current="page">Subscription</a>
+          <a href="acceptable-use.html">Acceptable Use</a>
+          <a href="ai-disclosure.html">AI Disclosure</a>
+        </nav>
+      </div>
 
-<nav>
-  <div class="nav-container">
-    <div class="logo">Loravo</div>
-    <div class="nav-links">
-      <a href="#" onclick="showTerms()">Terms</a>
-      <a href="#" class="active" onclick="showPlans()">Subscription</a>
+      <div class="header-right">
+        <a href="index.html" class="site-cta">Try Loravo <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </div>
-</nav>
+  </header>
 
-<div class="container" id="plans">
+  <main class="page-shell">
+    <section class="page-intro">
+      <div class="title-block">
+        <p class="meta">Effective March 5, 2026</p>
+        <h1>Subscription Terms</h1>
+        <p class="intro">
+          This page explains how paid Loravo plans may be offered, billed, renewed, canceled, refunded, and reviewed
+          for abuse or payment disputes.
+        </p>
+      </div>
+    </section>
 
-  <div class="eyebrow">PLANS</div>
-  <h1>Subscription</h1>
-  <p class="subtext">Review plan options and subscription conditions for Loravo.</p>
+    <article class="legal-document">
+        <section id="plans">
+          <h2>Subscription Plans Overview</h2>
+          <p>
+            Loravo may offer free plans, paid plans, add-ons, or limited-time promotional pricing. Plan names,
+            features, usage limits, and availability may change over time.
+          </p>
+          <p>
+            Any plan descriptions shown in-product or on marketing pages are for informational purposes unless expressly
+            incorporated into a binding order or purchase flow.
+          </p>
+          <div class="callout">
+            <strong>Plan placeholder notice.</strong>
+            <span>
+              Specific commercial plan details can be updated later without changing the overall legal structure of this page.
+            </span>
+          </div>
+        </section>
 
-  <!-- CORE -->
-  <div class="plan">
-    <div class="plan-header">
-      <div class="plan-title">Core</div>
-      <div class="price">$0/month</div>
+        <section id="billing">
+          <h2>Billing Terms</h2>
+          <p>
+            If you purchase a paid Loravo plan, you authorize Loravo and its payment processors to charge the selected
+            payment method for all applicable subscription fees, taxes, and related charges.
+          </p>
+          <p>
+            Unless otherwise stated during checkout, fees are billed in USD. You are responsible for maintaining an
+            accurate payment method and current billing information.
+          </p>
+        </section>
+
+        <section id="renewal">
+          <h2>Renewal Terms</h2>
+          <p>
+            Subscriptions renew automatically at the end of each billing period unless canceled before renewal.
+          </p>
+          <p>
+            Renewal charges may reflect changes in pricing, taxes, or plan configuration where permitted and where notice
+            is provided through the service, by email, or during the next billing cycle.
+          </p>
+        </section>
+
+        <section id="cancellation">
+          <h2>Cancellation Terms</h2>
+          <p>
+            You may cancel a subscription at any time through the service or by contacting support. Unless otherwise stated,
+            cancellation stops future renewals but does not automatically prorate or refund the current billing period.
+          </p>
+          <p>
+            If your account is terminated for abuse, fraud, security misuse, or material breach of Loravo’s legal terms,
+            access may end immediately without refund to the extent permitted by law.
+          </p>
+        </section>
+
+        <section id="refunds">
+          <h2>Refund Policy</h2>
+          <p>
+            All sales are final except where refund rights are required by law or where Loravo elects to review a request.
+          </p>
+          <p>
+            Based on Loravo’s current legal source material, refund requests submitted to support within seven (7) days
+            of purchase may be reviewed at Loravo’s sole discretion.
+          </p>
+          <p>
+            Granting one refund does not create an obligation to grant future refunds for the same or similar circumstances.
+          </p>
+        </section>
+
+        <section id="taxes">
+          <h2>Taxes and Currency</h2>
+          <p>
+            Displayed prices may exclude applicable taxes, duties, levies, or foreign exchange costs unless expressly stated otherwise.
+          </p>
+          <p>
+            You are responsible for any taxes or governmental charges associated with your purchase, except taxes based on Loravo’s net income.
+          </p>
+        </section>
+
+        <section id="disputes">
+          <h2>Charge Disputes and Failed Payments</h2>
+          <p>
+            If a payment is declined, reversed, or charged back, Loravo may suspend access to paid features, recover
+            amounts owed, and require updated payment information before restoring service.
+          </p>
+          <p>
+            Before initiating a charge dispute, you agree to contact Loravo at
+            <a href="mailto:support@loravo.com">support@loravo.com</a> so the issue can be reviewed directly.
+          </p>
+        </section>
+
+        <section id="abuse">
+          <h2>Abuse and Fraudulent Refund Behavior</h2>
+          <p>
+            Loravo may deny refunds, suspend subscriptions, or terminate accounts where it reasonably believes there has
+            been abuse of payment systems, repeated opportunistic refund requests, fraudulent activity, or other misuse
+            of promotional or billing mechanisms.
+          </p>
+          <p>
+            These enforcement rights supplement, and do not replace, the broader rights described in the
+            <a href="acceptable-use.html">Acceptable Use Policy</a> and <a href="index.html">Terms of Service</a>.
+          </p>
+        </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Loravo</p>
+      <a href="mailto:support@loravo.com">support@loravo.com</a>
     </div>
-    <ul>
-      <li>Basic access</li>
-      <li>Core features</li>
-      <li>Email support</li>
-    </ul>
-    <button>Get Started</button>
-  </div>
-
-  <!-- PLUS -->
-  <div class="plan">
-    <div class="plan-header">
-      <div class="plan-title">Plus</div>
-      <div class="price">$16.99/month</div>
-    </div>
-    <ul>
-      <li>Improved LXT models</li>
-      <li>Methodical planning</li>
-      <li>Email AI concierge messaging</li>
-      <li>Email, news, and weather tracking and automation</li>
-      <li>Custom AI personality</li>
-      <li>Priority speeding</li>
-    </ul>
-    <button>Buy Plus</button>
-  </div>
-
-  <!-- PRO -->
-  <div class="plan">
-    <div class="plan-header">
-      <div class="plan-title">Pro</div>
-      <div class="price">$34.99/month</div>
-    </div>
-    <ul>
-      <li>Everything in platinum</li>
-      <li>Advanced AI tools</li>
-      <li>Unlimited email accounts</li>
-      <li>Early access features</li>
-      <li>Strategic mode</li>
-    </ul>
-    <button>Buy Pro</button>
-  </div>
-
-</div>
-
-<!-- TERMS -->
-<div class="container terms" id="terms" style="display:none;">
-  <h2>Subscription Terms</h2>
-  <p>All subscriptions are billed monthly and renew automatically unless canceled.</p>
-  <p>All payments are final and non-refundable.</p>
-  <p>You may cancel anytime. Access continues until the billing period ends.</p>
-  <p>We may update pricing or features at any time.</p>
-</div>
-
-<script>
-function showTerms() {
-  document.getElementById("plans").style.display = "none";
-  document.getElementById("terms").style.display = "block";
-}
-
-function showPlans() {
-  document.getElementById("plans").style.display = "block";
-  document.getElementById("terms").style.display = "none";
-}
-</script>
-
+  </footer>
 </body>
 </html>
